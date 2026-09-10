@@ -1,0 +1,6 @@
+interface:
+  display_name: "Product Finish"
+  short_description: "Convert brass finishes on single or bulk photos"
+  default_prompt: "Use $product-finish to apply /PN-FINISH to my attached product photos."
+policy:
+  allow_implicit_invocation: true
