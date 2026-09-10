@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-09-10 — General skills library structure
+
+- Reframed the repository as an expandable Codex skills library rather than a finish-only project.
+- Added a skill catalog and install-one or install-all instructions.
+- Added contributor guidance and conventions for future independent skills.
+- Documented suggested boundaries for Etsy-to-Shopify and Etsy SEO workflows.
+
 ## 2026-09-10 — Codex installation guide
 
 - Added Git, ZIP, macOS/Linux, and Windows installation instructions.
