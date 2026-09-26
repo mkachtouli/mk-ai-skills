@@ -2,7 +2,7 @@
 
 A growing library of reusable skills for Codex. Each skill lives in its own folder and contains the instructions, references, scripts, and assets needed for that workflow.
 
-This repository currently includes Product Finish and Hatch Pet. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
+This repository currently includes Product Finish, Hatch Pet, and Carrier Invoice. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
 
 ## Skill catalog
 
@@ -10,6 +10,7 @@ This repository currently includes Product Finish and Hatch Pet. Future skills c
 | --- | --- | --- |
 | [product-finish](skills/product-finish/) | Convert brass product photos to approved Polished Nickel, Antique Copper, or Oil-Rubbed Bronze finishes | `$product-finish` |
 | [hatch-pet](skills/hatch-pet/) | Create, repair, validate, and package animated Codex pets | `$hatch-pet` |
+| [carrier-invoice](skills/carrier-invoice/) | Extract tracking-level shipping and DDP costs from carrier invoices into CSV | `$carrier-invoice /DSL-INVOICE` |
 
 The catalog will grow as new skills are added. A planned workflow should become a real folder only when its `SKILL.md` and required resources are ready.
 
@@ -31,6 +32,9 @@ mk-ai-skills/
     │   ├── references/
     │   ├── scripts/
     │   └── tests/
+    ├── carrier-invoice/
+    │   ├── SKILL.md
+    │   └── references/
     └── future-skill-name/
         ├── SKILL.md
         └── optional resources only when needed
@@ -158,6 +162,16 @@ $hatch-pet Turn the attached character art into an animated Codex pet. Preserve 
 ```
 
 The skill creates a Codex-compatible v2 pet package with an 8 × 11 sprite atlas, standard animation rows, look directions, and review previews. It requires image generation and the bundled runtime used by its scripts.
+
+## Carrier Invoice
+
+Attach DHL, Aramex, or FedEx carrier invoices and invoke:
+
+```text
+$carrier-invoice /DSL-INVOICE
+```
+
+The skill produces a CSV containing only `carrier`, `tracking_number`, `shipping_cost`, `ddp_cost`, `shipping_invoice_number`, and `ddp_invoice_number`. It reconciles invoice totals and pauses when a tax or charge cannot be assigned to a shipment reliably. `/DSL-INVOICE` is a text alias, not an application-registered slash command. The examined DHL layout is validated; the examined Aramex layout has invoice-level VAT that requires a business rule; FedEx requires a sample invoice before validation.
 
 ## Add another skill
 

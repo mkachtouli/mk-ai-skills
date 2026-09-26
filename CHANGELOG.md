@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-09-26 — Carrier invoice skill
+
+- Added `carrier-invoice` with the `/DSL-INVOICE` text shortcut and six-column shipping/DDP CSV output.
+- Documented the verified DHL layout, Aramex invoice-level VAT ambiguity, and the FedEx sample requirement.
+
 ## 2026-09-10 — General skills library structure
 
 - Reframed the repository as an expandable Codex skills library rather than a finish-only project.
