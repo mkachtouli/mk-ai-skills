@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-09-26 — Aramex VAT allocation
+
+- Applied Atlasty's confirmed 100 MAD taxable base and 20% VAT rule to each shipment on the examined Aramex invoice, subject to invoice-level reconciliation.
+
 ## 2026-09-26 — Carrier invoice skill
 
 - Added `carrier-invoice` with the `/DSL-INVOICE` text shortcut and six-column shipping/DDP CSV output.

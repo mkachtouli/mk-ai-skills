@@ -171,7 +171,7 @@ Attach DHL, Aramex, or FedEx carrier invoices and invoke:
 $carrier-invoice /DSL-INVOICE
 ```
 
-The skill produces a CSV containing only `carrier`, `tracking_number`, `shipping_cost`, `ddp_cost`, `shipping_invoice_number`, and `ddp_invoice_number`. It reconciles invoice totals and pauses when a tax or charge cannot be assigned to a shipment reliably. `/DSL-INVOICE` is a text alias, not an application-registered slash command. The examined DHL layout is validated; the examined Aramex layout has invoice-level VAT that requires a business rule; FedEx requires a sample invoice before validation.
+The skill produces a CSV containing only `carrier`, `tracking_number`, `shipping_cost`, `ddp_cost`, `shipping_invoice_number`, and `ddp_invoice_number`. It reconciles invoice totals and pauses when a tax or charge cannot be assigned to a shipment reliably. `/DSL-INVOICE` is a text alias, not an application-registered slash command. The examined DHL layout is validated; the examined Aramex layout uses Atlasty's confirmed 20 MAD VAT per shipment when its totals reconcile; FedEx requires a sample invoice before validation.
 
 ## Add another skill
 

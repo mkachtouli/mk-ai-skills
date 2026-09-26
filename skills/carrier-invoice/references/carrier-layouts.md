@@ -11,7 +11,7 @@ These notes guide classification, not automatic trust. Confirm the actual column
 ## Aramex Morocco
 
 - The examined outbound invoice has `HAWB`, `Base Charge`, `Autres Charges`, and `Net Montant` per shipment. Four displayed `Net Montant` values total 1,289.67 MAD.
-- The invoice also shows 80.00 MAD VAT at invoice level, for a printed total of 1,369.67 MAD. It does not explicitly allocate the VAT to individual HAWBs. A final tax-inclusive shipping cost cannot be read directly from its four rows. Obtain the user's allocation or pre-VAT convention before finalizing those rows.
+- Atlasty confirmed that Aramex taxes 100.00 MAD per shipment at 20%, making VAT 20.00 MAD per HAWB on this invoice. Add that to each `Net Montant`: 319.17, 304.02, 319.17, and 427.31 MAD. Their sum is the printed `Montant TTC` of 1,369.67 MAD. Use this rule on another invoice only if the taxable base equals 100.00 MAD × shipment count, the VAT rate is 20%, and the final sum reconciles.
 - An optional cash-payment stamp-duty note is not an invoiced shipment charge unless a later document establishes that it was actually billed.
 
 ## FedEx
