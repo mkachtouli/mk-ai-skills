@@ -1,12 +1,16 @@
-# Studio standard — version 1
+# Studio standard — version 2
 
 ## Provenance
 
 `studio-anchor.png` is the exact 1254 × 1254 PNG supplied on 2026-10-09 and selected by the user as the Studio Image photographic direction. It shows a golden bridge faucet against white with softbox highlights and a fading surface reflection. It is a **style anchor**, not a universal product or finish swatch. Retain the untouched reference for provenance; never reproduce its lower-left Brassty watermark in deliverables. Replace this standard only when the user requests an update.
 
+Version 2 incorporates the user's 2026-10-09 correction: studio edits must retain the original photograph's natural metal color and must not make brass warmer. The anchor itself remains unchanged.
+
 ## Theme
 
 High-key photography with readable metal, not flat or overexposed. Broad pale highlights and narrower dark bands articulate the actual target's curvature. Neutral softboxes and reflection cards create the material reflections, without household scenery. Highlight shape must follow the target, not the anchor faucet.
+
+The target is the color authority. Preserve its observed hue, saturation and undertone, even when it differs from generic descriptions of its finish. Do not add warm illumination, a golden grade or an inferred “correct” brass color. Relighting may change local luminance and reflection placement without changing the base metal color. Check matching midtone surfaces side by side with the source; bright white highlights and deep reflected bands are unsuitable as base-color comparisons.
 
 Near-white seamless backdrop with restrained gray falloff, no strong horizon, room or decorative texture. Isolated, sharp product with comfortable margins. Balance framing according to the target shape rather than imposing the faucet's bounding box.
 
@@ -16,8 +20,8 @@ The surface reflection follows the camera and surface plane, begins at real cont
 
 | Target finish | Studio light response |
 | --- | --- |
-| Unlacquered Brass | Preserve actual brass tone, polish, variation and existing patina; no invented aging. |
-| Lacquered Brass | Preserve clear-coated brass color and gloss; elongated highlights on polished surfaces. |
+| Unlacquered Brass | Match the original's actual hue, saturation and undertone, polish, variation and existing patina; no added warmth, yellow/orange enrichment or invented aging. |
+| Lacquered Brass | Match the original's clear-coated brass color without warming or gold grading; preserve gloss and elongated highlights on polished surfaces. |
 | Polished Nickel | Silver with the target's subtle warm undertone; bright and dark reflection bands, no yellow brass wash. |
 | Antique Copper | Preserve red-brown copper, dark recesses and fine texture; broad subdued highlights appropriate to satin sheen. |
 | Oil-Rubbed Bronze | Preserve dark brown/bronze and warm highlights with subdued reflectivity; no gray wash or polished-gold conversion. |

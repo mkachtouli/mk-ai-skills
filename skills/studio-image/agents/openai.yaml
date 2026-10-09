@@ -1,4 +1,4 @@
 interface:
   display_name: "Studio Image"
   short_description: "Reflective studio product photos with finish fidelity"
-  default_prompt: "Use $studio-image to restyle this product photo with the saved white studio lighting and reflection, preserving its design and current finish with no watermark."
+  default_prompt: "Use $studio-image to restyle this product photo with the saved white studio lighting and reflection, preserving its design and exact source metal color without added warmth or watermark."

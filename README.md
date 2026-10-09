@@ -135,7 +135,7 @@ For a batch:
 $studio-image Process every product photo in this folder. Preserve each existing finish.
 ```
 
-Request a finish conversion explicitly if needed. The reference supplies photographic direction, not a gold finish for every product. The complete skill folder includes the saved reference so it remains usable across chats. Built-in image generation is required; each result is visually reviewed, but generative edits cannot guarantee pixel-identical product geometry. The skill saves images and does not publish listings.
+Request a finish conversion explicitly if needed. The original target controls metal hue, saturation and undertone; studio edits must not add warmth or gold grading. The reference supplies photographic direction, not a gold finish for every product. The complete skill folder includes the saved reference so it remains usable across chats. Built-in image generation is required; each result is visually reviewed, but generative edits cannot guarantee pixel-identical product geometry or color. The skill saves images and does not publish listings.
 
 ## Product Finish
 
