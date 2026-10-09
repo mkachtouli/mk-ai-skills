@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-09 — Studio Image skill
+
+- Strengthened source-color preservation after user feedback: no added warmth, yellow/orange shift or gold grading; original-target midtones control color review.
+- Added `studio-image` with the user-selected white studio anchor, softbox metal highlights and fading surface reflection.
+- Preserves source product design and finish, omits the lower-left watermark, and adapts framing and reflections for wall-mounted fixtures and tall shower systems.
+- Includes portable visual references, Codex display metadata, bounded visual review and resumable batch guidance.
+
 ## 2026-09-26 — Carrier invoice skill
 
 - Added `carrier-invoice` with the `/DSL-INVOICE` text shortcut and six-column shipping/DDP CSV output.
