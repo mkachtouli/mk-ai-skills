@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-17 — Eight product finishes and revised ORB
+
+- Expanded Product Finish to eight separately delivered finishes, preserving explicit legacy scopes.
+- Added palette crops, physical material references and newer AC product examples.
+- Adopted the darker chocolate-brown ORB test with restrained bronze highlights; retained old references as historical evidence.
+- Added source-locked geometry and full-view/native-crop quality checks.
+
 ## 2026-09-26 — Carrier invoice skill
 
 - Added `carrier-invoice` with the `/DSL-INVOICE` text shortcut and six-column shipping/DDP CSV output.

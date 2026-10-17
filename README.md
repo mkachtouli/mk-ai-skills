@@ -8,7 +8,7 @@ This repository currently includes Product Finish, Hatch Pet, and Carrier Invoic
 
 | Skill | Purpose | Main invocation |
 | --- | --- | --- |
-| [product-finish](skills/product-finish/) | Convert brass product photos to approved Polished Nickel, Antique Copper, or Oil-Rubbed Bronze finishes | `$product-finish` |
+| [product-finish](skills/product-finish/) | Convert product photos to eight finishes with saved material references and source-locked geometry | `$product-finish` |
 | [hatch-pet](skills/hatch-pet/) | Create, repair, validate, and package animated Codex pets | `$hatch-pet` |
 | [carrier-invoice](skills/carrier-invoice/) | Extract tracking-level shipping and DDP costs from carrier invoices into CSV | `$carrier-invoice /DSL-INVOICE` |
 
@@ -123,7 +123,12 @@ Attach a brass product photograph and use one of these instructions:
 | `/PN-FINISH` | Polished Nickel |
 | `/AC-FINISH` | Antique Copper |
 | `/ORB-FINISH` | Oil-Rubbed Bronze using the approved reference set |
-| `/ALL-FINISH` | Separate PN, AC, and ORB versions |
+| `/UB-FINISH` | Unlacquered Brass |
+| `/AB-FINISH` | Antique Brass |
+| `/BB-FINISH` | Brushed Brass |
+| `/BN-FINISH` | Brushed Nickel |
+| `/PC-FINISH` | Polished Copper |
+| `/ALL-FINISH` | Eight separate finish images: UB, PN, AC, AB, ORB, BB, BN, PC |
 
 Example:
 
@@ -192,3 +197,7 @@ These folders are standalone skills for Codex desktop, CLI, and IDE environments
 ## Repository
 
 Maintained at [mkachtouli/mk-ai-skills](https://github.com/mkachtouli/mk-ai-skills). Automatic background synchronization is not enabled.
+
+### Product Finish palette
+
+`/ALL-FINISH` produces eight separate images: Unlacquered Brass (UB), Polished Nickel (PN), Antique Copper (AC), Antique Brass (AB), Oil-Rubbed Bronze (ORB), Brushed Brass (BB), Brushed Nickel (BN), and Polished Copper (PC). Request a subset with its finish names or individual `/XX-FINISH` shortcuts. Existing UB can remain unchanged. Explicit legacy three-finish jobs keep their requested scope. ORB follows the darker October 17 reference; PN and AC retain their calibrated references.
