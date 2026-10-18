@@ -1,0 +1,4 @@
+interface:
+  display_name: "3D Object"
+  short_description: "Faithful product models with real scale and GLB review"
+  default_prompt: "Use $3d-object to create or revise a source-faithful 3D model of this product, separating confirmed dimensions from estimates and preserving its actual design and finish."
