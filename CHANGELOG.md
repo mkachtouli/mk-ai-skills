@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-18 — Product 3D and video skills
+
+- Added `3d-object` for photo-guided product reconstruction, scoped dimension evidence, finish fidelity, editable models and actual GLB review.
+- Added `product-video` for useful photo/model listing clips and source-faithful external-generator prompts, including sequential measurement animation.
+- Added portable GLB bounds inspection and PNG-to-MP4 encoding helpers with meaningful tests; scripts keep runtimes and generated media outside the skill package.
+- Captured the Atlas case separately, preserving confirmed 17/8/7-inch dimensions and marking draft hardware sizes and the superseded 4-inch interpretation correctly.
+
 ## 2026-10-17 — Eight product finishes and revised ORB
 
 - Expanded Product Finish to eight separately delivered finishes, preserving explicit legacy scopes.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Video"
+  short_description: "Useful product videos with faithful detail and dimensions"
+  default_prompt: "Use $product-video to create an informative short video from these product photos or this 3D model, preserving all product details and the natural finish while clearly explaining confirmed dimensions."

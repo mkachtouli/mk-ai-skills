@@ -2,7 +2,7 @@
 
 A growing library of reusable skills for Codex. Each skill lives in its own folder and contains the instructions, references, scripts, and assets needed for that workflow.
 
-This repository currently includes Product Finish, Hatch Pet, and Carrier Invoice. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
+This repository currently includes Product Finish, Hatch Pet, Carrier Invoice, 3D Object, and Product Video. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
 
 ## Skill catalog
 
@@ -11,6 +11,8 @@ This repository currently includes Product Finish, Hatch Pet, and Carrier Invoic
 | [product-finish](skills/product-finish/) | Convert product photos to eight finishes with saved material references and source-locked geometry | `$product-finish` |
 | [hatch-pet](skills/hatch-pet/) | Create, repair, validate, and package animated Codex pets | `$hatch-pet` |
 | [carrier-invoice](skills/carrier-invoice/) | Extract tracking-level shipping and DDP costs from carrier invoices into CSV | `$carrier-invoice /DSL-INVOICE` |
+| [3d-object](skills/3d-object/) | Reconstruct or correct a real product model with confirmed scale, source-faithful finish and GLB review | `$3d-object` |
+| [product-video](skills/product-video/) | Create useful short videos from original photos or actual models, or write external video-generator prompts | `$product-video` |
 
 The catalog will grow as new skills are added. A planned workflow should become a real folder only when its `SKILL.md` and required resources are ready.
 
@@ -35,6 +37,18 @@ mk-ai-skills/
     ├── carrier-invoice/
     │   ├── SKILL.md
     │   └── references/
+    ├── 3d-object/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   ├── references/
+    │   ├── scripts/
+    │   └── tests/
+    ├── product-video/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   ├── references/
+    │   ├── scripts/
+    │   └── tests/
     └── future-skill-name/
         ├── SKILL.md
         └── optional resources only when needed
@@ -177,6 +191,32 @@ $carrier-invoice /DSL-INVOICE
 ```
 
 The skill produces a CSV containing only `carrier`, `tracking_number`, `shipping_cost`, `ddp_cost`, `shipping_invoice_number`, and `ddp_invoice_number`. It reconciles invoice totals and pauses when a tax or charge cannot be assigned to a shipment reliably. `/DSL-INVOICE` is a text alias, not an application-registered slash command. The examined DHL layout is validated; the examined Aramex layout has invoice-level VAT that requires a business rule; FedEx requires a sample invoice before validation.
+
+## 3D Object
+
+Attach product photographs and confirmed dimensions, or supply a product URL:
+
+```text
+$3d-object Create a GLB of this product. Preserve the actual handles, body proportions and finish. Separate confirmed dimensions from estimated details.
+```
+
+The skill produces an editable product model, a portable GLB and an actual-model review. It distinguishes source evidence from construction-only examples, keeps measurements and their endpoints explicit, and checks exported vertex bounds. A single photo cannot establish exact hidden geometry or calibrated material reflectance. Modelling requires an available 3D tool/runtime; the bundled standard-library GLB inspector does not reconstruct a product by itself.
+
+## Product Video
+
+```text
+$product-video Create a useful 14-second listing video from this original photo. Show the handles and body in close-up, then explain the confirmed dimensions with animated arrows. Preserve the finish and design.
+```
+
+```text
+$product-video Render this accepted GLB from several angles and add the confirmed dimensions.
+```
+
+```text
+$product-video Write an English prompt for an external video generator using these product references and confirmed specifications.
+```
+
+The skill chooses actual-model rendering, source-photo editing or a prompt handoff to match the request. It avoids invented single-image orbits and preserves source colour. The reusable encoder needs Python 3.8+ and FFmpeg with H.264 support; its integration test uses `FFMPEG_BINARY` when FFmpeg is not on PATH. Validate current platform requirements before an upload. Creating media does not itself publish or attach it to a live listing.
 
 ## Add another skill
 
