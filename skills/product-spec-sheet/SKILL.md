@@ -16,7 +16,7 @@ Turn a product URL into a complete, branded customer guide. The product URL is t
 
 ## Technical illustrations
 
-Use verified manufacturer drawings, source CAD/SVG or user-approved technical images. Reuse the exact product geometry and source part identities; a beauty photo is insufficient evidence for an exploded internal-parts drawing.
+Use verified manufacturer drawings, source CAD/SVG or user-approved technical images. For printed sheets, choose either a source-faithful technical line diagram or a detailed product/parts photograph with its background removed. Do not embed grey, colored or textured photographic backdrops that consume ink. Preserve transparency when placing cutouts on white paper, including the spaces inside holes and between hoses. Background removal must preserve every part, its size, position, finish and small hardware; verify the cutout against the original before reusing callouts. Reuse the exact product geometry and source part identities; a beauty photo is insufficient evidence for an exploded internal-parts drawing.
 
 For assembled and exploded views, prefer ONE shared vector/CAD master. Keep scale, outline, diameter, body width, leg lengths and threads identical; the exploded view translates parts along their assembly axes. Align each stem, cartridge, cap, washer and nut with its own mounting bore. Check centering against the actual design: a symmetric bridge spout mounts halfway between inlet axes. Never change dimensions to fit a generated picture.
 

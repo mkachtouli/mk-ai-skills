@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-10-29 — Print-friendly technical figures
+
+- Require technical diagrams or background-removed product cutouts for printed spec sheets, preserving parts and callout alignment.
+
 ## 2026-10-29 — Product specification sheets
 
 - Added `product-spec-sheet`: URL-led, branded two-page technical product guides.

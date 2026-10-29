@@ -6,7 +6,7 @@ Use this as a starting composition, not a fixed arrangement when the product dif
 
 A4 portrait; white paper background; approximately 44 pt side margins; original logo in its own proportions; dark text, fine neutral table rules. Brand color can remain in the logo. Use a clear sans-serif for technical text, approximately 9 pt body, 11–13 pt section headings and a 16–18 pt main heading. Avoid decorative backgrounds that consume ink.
 
-Header: brand logo on the left; product/model and short document descriptor on the right. Footer: brand/site and page count only. Never distort an image to fill a box.
+Header: brand logo on the left; product/model and short document descriptor on the right. Footer: brand/site and page count only. Never distort an image to fill a box. Use technical line drawings or background-removed product cutouts for technical figures. Photographic backdrops and broad background shadows must not print as grey rectangles.
 
 ## Page one: product and component references
 
