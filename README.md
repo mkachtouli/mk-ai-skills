@@ -2,7 +2,7 @@
 
 A growing library of reusable skills for Codex. Each skill lives in its own folder and contains the instructions, references, scripts, and assets needed for that workflow.
 
-This repository currently includes Product Finish, Hatch Pet, and Carrier Invoice. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
+This repository currently includes Product Finish, Hatch Pet, Carrier Invoice, and Product Spec Sheet. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
 
 ## Skill catalog
 
@@ -11,6 +11,8 @@ This repository currently includes Product Finish, Hatch Pet, and Carrier Invoic
 | [product-finish](skills/product-finish/) | Convert product photos to eight finishes with saved material references and source-locked geometry | `$product-finish` |
 | [hatch-pet](skills/hatch-pet/) | Create, repair, validate, and package animated Codex pets | `$hatch-pet` |
 | [carrier-invoice](skills/carrier-invoice/) | Extract tracking-level shipping and DDP costs from carrier invoices into CSV | `$carrier-invoice /DSL-INVOICE` |
+
+| [product-spec-sheet](skills/product-spec-sheet/) | Create a branded two-page technical product guide from a product URL and source documents | `$product-spec-sheet <product-url>` |
 
 The catalog will grow as new skills are added. A planned workflow should become a real folder only when its `SKILL.md` and required resources are ready.
 
@@ -177,6 +179,16 @@ $carrier-invoice /DSL-INVOICE
 ```
 
 The skill produces a CSV containing only `carrier`, `tracking_number`, `shipping_cost`, `ddp_cost`, `shipping_invoice_number`, and `ddp_invoice_number`. It reconciles invoice totals and pauses when a tax or charge cannot be assigned to a shipment reliably. `/DSL-INVOICE` is a text alias, not an application-registered slash command. The examined DHL layout is validated; the examined Aramex layout has invoice-level VAT that requires a business rule; FedEx requires a sample invoice before validation.
+
+## Product Spec Sheet
+
+Provide a product URL:
+
+```text
+$product-spec-sheet https://example.com/products/model
+```
+
+The skill discovers the brand, product details, linked technical documents and contact information, then creates a printable specification, components, dimensions, installation and care guide. It defaults to two white A4 pages and inches only, with numbered parts and a support QR pointing to the actual contact page. Missing critical facts require supporting information; it never invents dimensions or internal parts from a product photo. It includes an input validator and the approved layout guidance. PDF authoring, page rendering and web access must be available in the execution environment. The skill creates local deliverables and does not publish store files automatically.
 
 ## Add another skill
 

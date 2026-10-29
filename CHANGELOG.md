@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-10-29 — Product specification sheets
+
+- Added `product-spec-sheet`: URL-led, branded two-page technical product guides.
+- Captured the approved white print layout, inches-only default, numbered parts table, configuration contents and support QR behavior.
+- Added source/geometry safeguards, a manifest validator and seven validation tests.
+
 ## 2026-10-17 — Eight product finishes and revised ORB
 
 - Expanded Product Finish to eight separately delivered finishes, preserving explicit legacy scopes.

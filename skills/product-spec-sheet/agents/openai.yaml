@@ -1,0 +1,4 @@
+interface:
+  display_name: "Product Spec Sheet"
+  short_description: "Create branded product guides from a product URL"
+  default_prompt: "Use $product-spec-sheet to create a complete branded two-page product specification and care guide from this product URL."
