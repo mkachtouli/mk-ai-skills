@@ -1,5 +1,22 @@
 # Changelog
 
+## 2026-10-29 — Print-friendly technical figures
+
+- Require technical diagrams or background-removed product cutouts for printed spec sheets, preserving parts and callout alignment.
+
+## 2026-10-29 — Product specification sheets
+
+- Added `product-spec-sheet`: URL-led, branded two-page technical product guides.
+- Captured the approved white print layout, inches-only default, numbered parts table, configuration contents and support QR behavior.
+- Added source/geometry safeguards, a manifest validator and seven validation tests.
+
+## 2026-10-17 — Eight product finishes and revised ORB
+
+- Expanded Product Finish to eight separately delivered finishes, preserving explicit legacy scopes.
+- Added palette crops, physical material references and newer AC product examples.
+- Adopted the darker chocolate-brown ORB test with restrained bronze highlights; retained old references as historical evidence.
+- Added source-locked geometry and full-view/native-crop quality checks.
+
 ## 2026-10-09 — Studio Image skill
 
 - Strengthened source-color preservation after user feedback: no added warmth, yellow/orange shift or gold grading; original-target midtones control color review.

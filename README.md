@@ -2,16 +2,18 @@
 
 A growing library of reusable skills for Codex. Each skill lives in its own folder and contains the instructions, references, scripts, and assets needed for that workflow.
 
-This repository currently includes Studio Image, Product Finish, Hatch Pet, and Carrier Invoice. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
+This repository currently includes Studio Image, Product Finish, Hatch Pet, Carrier Invoice, and Product Spec Sheet. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
 
 ## Skill catalog
 
 | Skill | Purpose | Main invocation |
 | --- | --- | --- |
 | [studio-image](skills/studio-image/) | Apply the saved white reflective studio theme while preserving each product's design and existing finish, without watermarks | `$studio-image` |
-| [product-finish](skills/product-finish/) | Convert brass product photos to approved Polished Nickel, Antique Copper, or Oil-Rubbed Bronze finishes | `$product-finish` |
+| [product-finish](skills/product-finish/) | Convert product photos to eight finishes with saved material references and source-locked geometry | `$product-finish` |
 | [hatch-pet](skills/hatch-pet/) | Create, repair, validate, and package animated Codex pets | `$hatch-pet` |
 | [carrier-invoice](skills/carrier-invoice/) | Extract tracking-level shipping and DDP costs from carrier invoices into CSV | `$carrier-invoice /DSL-INVOICE` |
+
+| [product-spec-sheet](skills/product-spec-sheet/) | Create a branded two-page technical product guide from a product URL and source documents | `$product-spec-sheet <product-url>` |
 
 The catalog will grow as new skills are added. A planned workflow should become a real folder only when its `SKILL.md` and required resources are ready.
 
@@ -26,7 +28,7 @@ mk-ai-skills/
     ├── studio-image/
     │   ├── SKILL.md
     │   ├── agents/
-    │   └── references/       Studio anchor and finish-aware lighting guidance
+    │   └── references/
     ├── product-finish/
     │   ├── SKILL.md          Required skill instructions
     │   ├── agents/           Optional Codex interface metadata
@@ -146,7 +148,12 @@ Attach a brass product photograph and use one of these instructions:
 | `/PN-FINISH` | Polished Nickel |
 | `/AC-FINISH` | Antique Copper |
 | `/ORB-FINISH` | Oil-Rubbed Bronze using the approved reference set |
-| `/ALL-FINISH` | Separate PN, AC, and ORB versions |
+| `/UB-FINISH` | Unlacquered Brass |
+| `/AB-FINISH` | Antique Brass |
+| `/BB-FINISH` | Brushed Brass |
+| `/BN-FINISH` | Brushed Nickel |
+| `/PC-FINISH` | Polished Copper |
+| `/ALL-FINISH` | Eight separate finish images: UB, PN, AC, AB, ORB, BB, BN, PC |
 
 Example:
 
@@ -196,6 +203,16 @@ $carrier-invoice /DSL-INVOICE
 
 The skill produces a CSV containing only `carrier`, `tracking_number`, `shipping_cost`, `ddp_cost`, `shipping_invoice_number`, and `ddp_invoice_number`. It reconciles invoice totals and pauses when a tax or charge cannot be assigned to a shipment reliably. `/DSL-INVOICE` is a text alias, not an application-registered slash command. The examined DHL layout is validated; the examined Aramex layout has invoice-level VAT that requires a business rule; FedEx requires a sample invoice before validation.
 
+## Product Spec Sheet
+
+Provide a product URL:
+
+```text
+$product-spec-sheet https://example.com/products/model
+```
+
+The skill discovers the brand, product details, linked technical documents and contact information, then creates a printable specification, components, dimensions, installation and care guide. It defaults to two white A4 pages and inches only, with numbered parts and a support QR pointing to the actual contact page. Missing critical facts require supporting information; it never invents dimensions or internal parts from a product photo. It includes an input validator and the approved layout guidance. PDF authoring, page rendering and web access must be available in the execution environment. The skill creates local deliverables and does not publish store files automatically.
+
 ## Add another skill
 
 Follow [CONTRIBUTING.md](CONTRIBUTING.md). In brief:
@@ -215,3 +232,7 @@ These folders are standalone skills for Codex desktop, CLI, and IDE environments
 ## Repository
 
 Maintained at [mkachtouli/mk-ai-skills](https://github.com/mkachtouli/mk-ai-skills). Automatic background synchronization is not enabled.
+
+### Product Finish palette
+
+`/ALL-FINISH` produces eight separate images: Unlacquered Brass (UB), Polished Nickel (PN), Antique Copper (AC), Antique Brass (AB), Oil-Rubbed Bronze (ORB), Brushed Brass (BB), Brushed Nickel (BN), and Polished Copper (PC). Request a subset with its finish names or individual `/XX-FINISH` shortcuts. Existing UB can remain unchanged. Explicit legacy three-finish jobs keep their requested scope. ORB follows the darker October 17 reference; PN and AC retain their calibrated references.
