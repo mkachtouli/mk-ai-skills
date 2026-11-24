@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lifestyle Image"
+  short_description: "Three faithful product scenes using supplied or real rooms"
+  default_prompt: "Use $lifestyle-image with my product photo, same-product photos or product URL. Use my environment photo if supplied; otherwise find three verified real environment photographs online. Generate three separate candidates, preserving every product detail and adapting lighting to each room."

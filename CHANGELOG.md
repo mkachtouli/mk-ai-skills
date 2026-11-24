@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-11-24
+
+- Add mandatory post-generation physical-size and internal-proportions audit with landmark evidence, camera-aware scale, uncertainty and fail/unresolved gates; re-audit every correction.
+
+- Require full-size product/site fit and source-supported camera compatibility before lifestyle generation; reject undersized environments instead of shrinking products. Record dimensional evidence and camera review. — Reference-guided lifestyle images
+
+- Changed the default to three separately reviewed candidates: one supplied room used three times, or three provenance-checked real web photographs when no room is supplied.
+- Product input accepts a single photo, same-product photo set or URL; web discovery proceeds automatically unless an environment-selection stage is explicitly requested. AI rooms/renders and known product-detail failures cannot fill a candidate slot.
+
+- Made every product microdetail a non-negotiable review gate and the environment the master lighting reference; local product relighting must preserve physical finish and construction.
+
+- Added `lifestyle-image` with product photos OR a product URL, with supplied environments or verified real-photo web discovery.
+- Added gallery-first variant/view selection after a frontal-pose mismatch: product identity and finish remain locked while supported installation perspective is adapted.
+- Locked product design and natural finish, with reference-preserving placement by default and scene adaptation only when requested.
+- Added mounting/scale/lighting review guidance, role-labelled prompts and bounded corrections; no dependency on other product-photography skills.
+
 ## 2026-10-29 — Print-friendly technical figures
 
 - Require technical diagrams or background-removed product cutouts for printed spec sheets, preserving parts and callout alignment.

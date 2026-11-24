@@ -2,13 +2,14 @@
 
 A growing library of reusable skills for Codex. Each skill lives in its own folder and contains the instructions, references, scripts, and assets needed for that workflow.
 
-This repository currently includes Studio Image, Product Finish, Hatch Pet, Carrier Invoice, and Product Spec Sheet. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
+This repository currently includes Studio Image, Lifestyle Image, Product Finish, Hatch Pet, Carrier Invoice, and Product Spec Sheet. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
 
 ## Skill catalog
 
 | Skill | Purpose | Main invocation |
 | --- | --- | --- |
 | [studio-image](skills/studio-image/) | Apply the saved white reflective studio theme while preserving each product's design and existing finish, without watermarks | `$studio-image` |
+| [lifestyle-image](skills/lifestyle-image/) | Generate three faithful product scenes using a supplied room or three verified real web environments | `$lifestyle-image` |
 | [product-finish](skills/product-finish/) | Convert product photos to eight finishes with saved material references and source-locked geometry | `$product-finish` |
 | [hatch-pet](skills/hatch-pet/) | Create, repair, validate, and package animated Codex pets | `$hatch-pet` |
 | [carrier-invoice](skills/carrier-invoice/) | Extract tracking-level shipping and DDP costs from carrier invoices into CSV | `$carrier-invoice /DSL-INVOICE` |
@@ -26,6 +27,10 @@ mk-ai-skills/
 ├── CHANGELOG.md              Repository-wide changes
 └── skills/
     ├── studio-image/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   └── references/
+    ├── lifestyle-image/
     │   ├── SKILL.md
     │   ├── agents/
     │   └── references/
@@ -138,6 +143,25 @@ $studio-image Process every product photo in this folder. Preserve each existing
 ```
 
 Request a finish conversion explicitly if needed. The original target controls metal hue, saturation and undertone; studio edits must not add warmth or gold grading. The reference supplies photographic direction, not a gold finish for every product. The complete skill folder includes the saved reference so it remains usable across chats. Built-in image generation is required; each result is visually reviewed, but generative edits cannot guarantee pixel-identical product geometry or color. The skill saves images and does not publish listings.
+
+## Lifestyle Image
+
+Before generation, check original physical dimensions against the basin/site and match the room camera to a real product view. Reject incompatible environments; never shrink the product to make it fit. After every generation/correction, audit physical dimensions and component proportions from the returned image; unsupported dimensional claims stay unresolved.
+
+Supply one product photo, multiple photos of the same product, or a product-page URL:
+
+```text
+$lifestyle-image https://example.com/product-page
+```
+
+The skill retrieves the gallery views it needs, keeps the exact product variant and every small detail fixed, and creates **three separate candidates** for user selection. If an environment photo is supplied, all three attempts use that room. If none is supplied, the skill searches for three real photographed environments, checks their source/project photography evidence and physical/camera compatibility, and generates one integration in each. AI-generated rooms, renders, virtual staging and uncertain-provenance images are excluded. It proceeds through discovery and generation unless the user explicitly asks to choose environments first.
+
+```text
+$lifestyle-image
+These are photos of the same product. Use the attached kitchen photograph and create three separate integration candidates.
+```
+
+The environment controls lighting; product geometry, proportions, microdetails and physical finish remain authoritative. Known detail changes or implausible perspective fail review even when the image looks attractive. The three-candidate default does not authorize filler images with known defects: rejected slots are identified honestly. The skill uses the built-in image editor, preserves originals, records sources/prompts/review per candidate and does not publish listings. Generative editing cannot guarantee pixel-identical preservation.
 
 ## Product Finish
 
