@@ -10,12 +10,13 @@ Input roles:
 - Image [index/name]: PRODUCT IDENTITY AND FINISH reference. This exact object is the product being placed.
 - Image [index/name]: ENVIRONMENT [BASE / INSPIRATION] reference. This determines the location and visual setting.
 - [Optional image index/name]: additional geometry evidence of the SAME product.
+- [Optional image index/name]: gallery installation/pose evidence only; explicitly exclude any different handle style or finish shown in it.
 
 Request:
 Integrate this exact photographed [product] into the supplied [environment], at [observed installation site], mounted on [surface]. [Replace only the existing identified fixture and repair its immediate mounting area / insert into the specified clear site].
 
 Product lock:
-Preserve [observed silhouette, component count, handle shape/asymmetry, arm or spout configuration, curvature, thickness, joints, outlet, mounting plates, holes, hardware and engraving]. Keep the exact relative proportions. Do not simplify, beautify, symmetrize, unfold/reconfigure, add accessories or substitute a similar design. Do not infer the product from a text description or copy the environment fixture.
+Preserve [observed silhouette, component count, handle shape/asymmetry, arm or spout configuration, curvature, thickness, joints, outlet, mounting plates, holes, hardware and engraving]. Keep the exact relative proportions. Use a gallery-supported view matching the environment camera; do not paste a frontal catalogue pose onto an oblique wall. Do not simplify, beautify, symmetrize, arbitrarily unfold/reconfigure, add accessories or substitute a similar design. Do not infer the product from a text description or copy the environment fixture.
 
 Finish lock:
 Retain [observed source hue/undertone, patina, texture and gloss] and the original non-metal parts. Match local light and reflections while preserving material identity. No warmer yellow/orange gold grade, copper shift, fake polishing or finish conversion.

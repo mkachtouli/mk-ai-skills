@@ -2,7 +2,8 @@
 
 ## 2026-11-24 — Reference-guided lifestyle images
 
-- Added `lifestyle-image` with two required inputs: the exact product and the environment photo/inspiration.
+- Added `lifestyle-image` with two required input roles: product photos OR a product URL, and an environment photo/inspiration.
+- Added gallery-first variant/view selection after a frontal-pose mismatch: product identity and finish remain locked while supported installation perspective is adapted.
 - Locked product design and natural finish, with reference-preserving placement by default and scene adaptation only when requested.
 - Added mounting/scale/lighting review guidance, role-labelled prompts and bounded corrections; no dependency on other product-photography skills.
 

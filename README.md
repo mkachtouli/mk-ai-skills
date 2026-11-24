@@ -146,14 +146,14 @@ Request a finish conversion explicitly if needed. The original target controls m
 
 ## Lifestyle Image
 
-Supply two input groups: the exact product photograph and an environment photograph or visual inspiration, then invoke:
+Supply two input groups: product photographs OR a product-page URL, plus an environment photograph or visual inspiration, then invoke:
 
 ```text
 $lifestyle-image
 Image 1 is the product. Image 2 is the environment reference. Integrate this exact product into that setting, preserving its design, proportions and natural finish.
 ```
 
-The product controls identity and finish; the environment controls the setting. The default retains the reference scene's recognizable layout, materials, viewpoint and lighting, with local installation edits. An explicitly requested inspired adaptation may change the composition while retaining the specified reference features. The skill does not invent a generic room when the environment is missing, and does not require Studio Image preprocessing.
+A product URL can replace the product upload: the skill reviews gallery views and variants, then selects evidence matching the environment camera instead of pasting a frontal catalogue pose. The product controls identity and finish; the environment controls the setting. The default retains the reference scene's recognizable layout, materials, viewpoint and lighting, with local installation edits. An explicitly requested inspired adaptation may change the composition while retaining the specified reference features. The skill does not invent a generic room when the environment is missing, and does not require Studio Image preprocessing.
 
 For example, a wall pot filler is placed at a plausible backsplash position above the cooking area; a deck bridge faucet belongs at the sink. Known dimensions guide scale, while unknown fit/scale remains approximate. The skill uses the built-in image editor, reviews the output against both originals and reports unresolved product or scene drift. Generative editing does not guarantee pixel-identical preservation. It produces images without publishing listings.
 
