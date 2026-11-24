@@ -146,7 +146,7 @@ Request a finish conversion explicitly if needed. The original target controls m
 
 ## Lifestyle Image
 
-Before generation, check original physical dimensions against the basin/site and match the room camera to a real product view. Reject incompatible environments; never shrink the product to make it fit.
+Before generation, check original physical dimensions against the basin/site and match the room camera to a real product view. Reject incompatible environments; never shrink the product to make it fit. After every generation/correction, audit physical dimensions and component proportions from the returned image; unsupported dimensional claims stay unresolved.
 
 Supply one product photo, multiple photos of the same product, or a product-page URL:
 

@@ -31,6 +31,7 @@ Inspect the whole scene and a native-size product crop against the inputs:
 | --- | --- |
 | Product identity | Same silhouette and ALL details: component count, handle asymmetry, curves/thickness, joints, seams, screw heads, ring/collar and edge profiles, holes, outlet/aerator, plates, engraving and surface texture |
 | Finish | Source-consistent hue/undertone, patina, gloss and texture; no warmer gold conversion or plastic appearance |
+| Dimensions and proportions | Mandatory [post-generation audit](dimensional-audit.md): original world height/reach supported by camera/site evidence; matching-view straight-riser, arch, body, tube and handle ratios; unsupported measurements are unresolved |
 | Installation | Correct mounting surface, support, contact, orientation, clearances and credible relative scale |
 | Integration | Environment-led light direction/temperature/exposure/contrast and highlight/shadow softness; matched perspective, occlusion and reflections; no conflicting studio highlights, halos or floating edges |
 | Environment | Recognizable reference layout/materials/palette and requested viewpoint; no unrelated room invention |

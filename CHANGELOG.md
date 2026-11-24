@@ -2,6 +2,8 @@
 
 ## 2026-11-24
 
+- Add mandatory post-generation physical-size and internal-proportions audit with landmark evidence, camera-aware scale, uncertainty and fail/unresolved gates; re-audit every correction.
+
 - Require full-size product/site fit and source-supported camera compatibility before lifestyle generation; reject undersized environments instead of shrinking products. Record dimensional evidence and camera review. — Reference-guided lifestyle images
 
 - Changed the default to three separately reviewed candidates: one supplied room used three times, or three provenance-checked real web photographs when no room is supplied.
