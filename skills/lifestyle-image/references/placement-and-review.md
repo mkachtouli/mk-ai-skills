@@ -19,9 +19,9 @@ Use measured dimensions when supplied. Familiar room objects can suggest relativ
 
 ## Photographic integration
 
-Match camera perspective, contact/attachment, exposure and depth of field. The product should share the room's light direction, local shadow softness and nearby reflection environment without losing its source finish. Avoid a pasted-on white studio halo, double shadows, mirror reflections that still show the removed fixture, and reflected props not present in the scene.
+Match camera perspective, contact/attachment and depth of field. The environment is the lighting authority: adapt the product to the room's light direction, colour temperature, exposure, contrast, local shadow softness and nearby reflection environment. Preserve the room's existing illumination rather than globally relighting it to fit the catalogue photo. Keep every small physical product detail intact while changing its apparent lighting response. Avoid a pasted-on white studio halo, double shadows, mirror reflections that still show the removed fixture, and reflected props not present in the scene.
 
-Brass may receive environmental highlights but its base colour should not be pushed into orange copper or generic saturated gold. Preserve antique patina/brushed texture where present; a polished studio anchor is not a licence to polish every finish. Handle dark rubber/ceramic/glass independently. Do not recolour the entire kitchen to make the insert look consistent.
+Separate material identity from lighting response. Environmental colour may appear naturally in highlights/reflections, but brass base colour must not be converted to orange copper or generic saturated gold. Do not preserve an incompatible studio highlight merely to keep the source pixel brightness unchanged. Preserve antique patina/brushed texture where present; a polished studio anchor is not a licence to polish every finish. Handle dark rubber/ceramic/glass independently. Do not recolour the entire kitchen to make the insert look consistent.
 
 ## Review gates
 
@@ -29,11 +29,11 @@ Inspect the whole scene and a native-size product crop against the inputs:
 
 | Gate | Look for |
 | --- | --- |
-| Product identity | Same silhouette, component count, handle asymmetry, curves, thickness, joints, holes, plates, small parts and engraving |
+| Product identity | Same silhouette and ALL details: component count, handle asymmetry, curves/thickness, joints, seams, screw heads, ring/collar and edge profiles, holes, outlet/aerator, plates, engraving and surface texture |
 | Finish | Source-consistent hue/undertone, patina, gloss and texture; no warmer gold conversion or plastic appearance |
 | Installation | Correct mounting surface, support, contact, orientation, clearances and credible relative scale |
-| Integration | Matched perspective, shadows, occlusion and reflections; no halos or floating edges |
+| Integration | Environment-led light direction/temperature/exposure/contrast and highlight/shadow softness; matched perspective, occlusion and reflections; no conflicting studio highlights, halos or floating edges |
 | Environment | Recognizable reference layout/materials/palette and requested viewpoint; no unrelated room invention |
 | Scope | No unrequested props, text, duplicates, accessories, missing parts or room restyling |
 
-When one gate fails, name the specific defect and target the correction. Keep both original input groups. A visually plausible result is not proof of pixel-identical product geometry or installation fit. Stop with a concrete unresolved status after two unsuccessful corrections; do not hide that status in a positive summary.
+A known tiny product-detail change fails the image just as a major silhouette error does. When one gate fails, name the specific defect and target the correction. Keep both original input groups. A visually plausible result is not proof of pixel-identical product geometry or installation fit. Stop with a concrete unresolved status after two unsuccessful corrections; do not hide that status in a positive summary.

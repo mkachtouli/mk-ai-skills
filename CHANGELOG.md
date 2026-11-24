@@ -2,6 +2,8 @@
 
 ## 2026-11-24 — Reference-guided lifestyle images
 
+- Made every product microdetail a non-negotiable review gate and the environment the master lighting reference; local product relighting must preserve physical finish and construction.
+
 - Added `lifestyle-image` with two required input roles: product photos OR a product URL, and an environment photo/inspiration.
 - Added gallery-first variant/view selection after a frontal-pose mismatch: product identity and finish remain locked while supported installation perspective is adapted.
 - Locked product design and natural finish, with reference-preserving placement by default and scene adaptation only when requested.
