@@ -9,7 +9,7 @@ This repository currently includes Studio Image, Lifestyle Image, Product Finish
 | Skill | Purpose | Main invocation |
 | --- | --- | --- |
 | [studio-image](skills/studio-image/) | Apply the saved white reflective studio theme while preserving each product's design and existing finish, without watermarks | `$studio-image` |
-| [lifestyle-image](skills/lifestyle-image/) | Integrate the exact product into a supplied environment reference, preserving its design and finish | `$lifestyle-image` |
+| [lifestyle-image](skills/lifestyle-image/) | Generate three faithful product scenes using a supplied room or three verified real web environments | `$lifestyle-image` |
 | [product-finish](skills/product-finish/) | Convert product photos to eight finishes with saved material references and source-locked geometry | `$product-finish` |
 | [hatch-pet](skills/hatch-pet/) | Create, repair, validate, and package animated Codex pets | `$hatch-pet` |
 | [carrier-invoice](skills/carrier-invoice/) | Extract tracking-level shipping and DDP costs from carrier invoices into CSV | `$carrier-invoice /DSL-INVOICE` |
@@ -146,16 +146,20 @@ Request a finish conversion explicitly if needed. The original target controls m
 
 ## Lifestyle Image
 
-Supply two input groups: product photographs OR a product-page URL, plus an environment photograph or visual inspiration, then invoke:
+Supply one product photo, multiple photos of the same product, or a product-page URL:
+
+```text
+$lifestyle-image https://example.com/product-page
+```
+
+The skill retrieves the gallery views it needs, keeps the exact product variant and every small detail fixed, and creates **three separate candidates** for user selection. If an environment photo is supplied, all three attempts use that room. If none is supplied, the skill searches for three real photographed environments, checks their source/project photography evidence and physical/camera compatibility, and generates one integration in each. AI-generated rooms, renders, virtual staging and uncertain-provenance images are excluded. It proceeds through discovery and generation unless the user explicitly asks to choose environments first.
 
 ```text
 $lifestyle-image
-Image 1 is the product. Image 2 is the environment reference. Integrate this exact product into that setting, preserving its design, proportions and natural finish.
+These are photos of the same product. Use the attached kitchen photograph and create three separate integration candidates.
 ```
 
-A product URL can replace the product upload: the skill reviews gallery views and variants, then selects evidence matching the environment camera instead of pasting a frontal catalogue pose. The product controls identity and finish; the environment controls the setting. The default retains the reference scene's recognizable layout, materials, viewpoint and lighting, with local installation edits. An explicitly requested inspired adaptation may change the composition while retaining the specified reference features. The skill does not invent a generic room when the environment is missing, and does not require Studio Image preprocessing.
-
-For example, a wall pot filler is placed at a plausible backsplash position above the cooking area; a deck bridge faucet belongs at the sink. Known dimensions guide scale, while unknown fit/scale remains approximate. The skill uses the built-in image editor, reviews the output against both originals and reports unresolved product or scene drift. Generative editing does not guarantee pixel-identical preservation. It produces images without publishing listings.
+The environment controls lighting; product geometry, proportions, microdetails and physical finish remain authoritative. Known detail changes or implausible perspective fail review even when the image looks attractive. The three-candidate default does not authorize filler images with known defects: rejected slots are identified honestly. The skill uses the built-in image editor, preserves originals, records sources/prompts/review per candidate and does not publish listings. Generative editing cannot guarantee pixel-identical preservation.
 
 ## Product Finish
 

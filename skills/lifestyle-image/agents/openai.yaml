@@ -1,4 +1,4 @@
 interface:
   display_name: "Lifestyle Image"
-  short_description: "Match real products to supplied rooms using photos or URLs"
-  default_prompt: "Use $lifestyle-image with a product photo or product-page URL and an environment reference. Select gallery views matching the room camera, preserve the exact variant and finish, and integrate the product with realistic mounting depth and perspective."
+  short_description: "Three faithful product scenes using supplied or real rooms"
+  default_prompt: "Use $lifestyle-image with my product photo, same-product photos or product URL. Use my environment photo if supplied; otherwise find three verified real environment photographs online. Generate three separate candidates, preserving every product detail and adapting lighting to each room."

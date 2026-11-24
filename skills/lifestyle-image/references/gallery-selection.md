@@ -18,3 +18,7 @@ Explain camera/assembly relationships concretely: where the flange contacts the 
 Do not transfer the product-reference room's marble, pans, rails or cooker into the destination photo. Render the product's depth, shadows and reflections in the destination camera, avoiding a flat, front-facing pasted silhouette on an oblique wall.
 
 Review against all role-labelled sources. For a Crown/Flat gallery, for example, Crown identity must retain rounded ball-ended cross handles even if a Flat photograph supplies the clearest installation pose. A changed camera pose is not permission to simplify joints, thin the body, recolour brass or merge variants.
+
+## Match environments to supported product views
+
+Before committing to a room, compare its camera with the real product views available. A source-supported viewpoint and physically suitable mounting area matter more than a beautiful but incompatible room. If perspective remains implausible, reject that candidate or select a better-supported environment; do not invent hidden product geometry or force arbitrary screen-space tube angles while calling the construction unchanged. Three candidate slots provide alternatives, not permission to deliver known defects.

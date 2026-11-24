@@ -2,9 +2,12 @@
 
 ## 2026-11-24 — Reference-guided lifestyle images
 
+- Changed the default to three separately reviewed candidates: one supplied room used three times, or three provenance-checked real web photographs when no room is supplied.
+- Product input accepts a single photo, same-product photo set or URL; web discovery proceeds automatically unless an environment-selection stage is explicitly requested. AI rooms/renders and known product-detail failures cannot fill a candidate slot.
+
 - Made every product microdetail a non-negotiable review gate and the environment the master lighting reference; local product relighting must preserve physical finish and construction.
 
-- Added `lifestyle-image` with two required input roles: product photos OR a product URL, and an environment photo/inspiration.
+- Added `lifestyle-image` with product photos OR a product URL, with supplied environments or verified real-photo web discovery.
 - Added gallery-first variant/view selection after a frontal-pose mismatch: product identity and finish remain locked while supported installation perspective is adapted.
 - Locked product design and natural finish, with reference-preserving placement by default and scene adaptation only when requested.
 - Added mounting/scale/lighting review guidance, role-labelled prompts and bounded corrections; no dependency on other product-photography skills.

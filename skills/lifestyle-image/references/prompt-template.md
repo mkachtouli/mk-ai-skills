@@ -4,11 +4,11 @@ Adapt this to inspected inputs. Do not send unfilled placeholders or unsupported
 
 ```text
 Use case: compositing.
-Deliverable: one photorealistic lifestyle product image.
+Deliverable: one standalone photorealistic lifestyle product image, candidate [1/2/3] of three separate edit calls. Do not produce a collage.
 
 Input roles:
 - Image [index/name]: PRODUCT IDENTITY AND FINISH reference. This exact object is the product being placed.
-- Image [index/name]: ENVIRONMENT [BASE / INSPIRATION] reference. This determines the location and visual setting.
+- Image [index/name]: ENVIRONMENT [SUPPLIED BASE / VERIFIED WEB PHOTO / EXPLICIT INSPIRATION] reference. This determines the location and visual setting.
 - [Optional image index/name]: additional geometry evidence of the SAME product.
 - [Optional image index/name]: gallery installation/pose evidence only; explicitly exclude any different handle style or finish shown in it.
 
