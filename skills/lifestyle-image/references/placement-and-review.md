@@ -37,3 +37,10 @@ Inspect the whole scene and a native-size product crop against the inputs:
 | Scope | No unrequested props, text, duplicates, accessories, missing parts or room restyling |
 
 A known tiny product-detail change fails the image just as a major silhouette error does. When one gate fails, name the specific defect and target the correction. Keep both original input groups. A visually plausible result is not proof of pixel-identical product geometry or installation fit. Stop with a concrete unresolved status after two unsuccessful corrections; do not hide that status in a positive summary.
+
+
+## Full-size fit and camera record
+
+Before generation record: (1) authoritative product measurements and what each measures; (2) site/basin width/depth and deck clearance with source or explicit estimated range; (3) outlet landing point using original reach and handle/overhead clearance; (4) exact source product view and agreement with room camera elevation, mounting plane, spout direction and handle-axis depth. Reject incompatible or unsupported pairings before the edit call. Use a well-supported room rather than forcing an attractive one.
+
+Review world-size consistency after generation against the same dimensional anchors, allowing perspective projection but no arbitrary world-size reduction. If the fixture looks too large for the basin, choose another environment; do not “correct” by shrinking the whole fixture or altering any component. If an output violates the dimensional plan, regenerate to the original plan without moving the goalposts. If that repeatedly fails, mark rejected. Review exact details at native size; a tiny fixture in a wide shot is insufficient evidence to claim microdetail fidelity.

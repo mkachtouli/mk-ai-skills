@@ -1,6 +1,8 @@
 # Changelog
 
-## 2026-11-24 — Reference-guided lifestyle images
+## 2026-11-24
+
+- Require full-size product/site fit and source-supported camera compatibility before lifestyle generation; reject undersized environments instead of shrinking products. Record dimensional evidence and camera review. — Reference-guided lifestyle images
 
 - Changed the default to three separately reviewed candidates: one supplied room used three times, or three provenance-checked real web photographs when no room is supplied.
 - Product input accepts a single photo, same-product photo set or URL; web discovery proceeds automatically unless an environment-selection stage is explicitly requested. AI rooms/renders and known product-detail failures cannot fill a candidate slot.

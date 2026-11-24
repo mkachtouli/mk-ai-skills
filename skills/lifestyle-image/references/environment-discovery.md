@@ -15,9 +15,11 @@ Read this when the user provides product evidence but no environment photograph.
 For each candidate, assess:
 - A credible installation surface/location for this actual product, and space for its full dimensions/configuration.
 - A camera angle supported by available exact-product photos, including mounting-plane orientation and visible spindle/body depth.
-- Plausible scale evidence; note uncertainty when dimensions are unavailable.
+- Original product dimensions with exact measurement definitions, plus site/basin width and depth, deck/mounting space, reach landing point, handle clearance and overhead space. Use source specifications or identifiable dimensional anchors, label estimates and reject a known small-site mismatch. No arbitrary physical shrinking/enlargement is permitted.
 - Lighting that can be matched without erasing source material identity or fine product details.
 - Adequate resolution and visibility, without foreground clutter hiding the installation or forcing invented product parts.
+
+Record a pass/fail decision for full-size fit and camera compatibility BEFORE choosing the three bases. For a failed pair, find another room; do not prompt the generator to scale the product down, widen the sink, change the spout direction or invent a missing product view. An “approximate” label does not turn a visibly implausible installation into an acceptable image.
 
 Prefer achievable geometry and clear inspection over dramatic lighting or a fashionable room. Three distinctive styles are useful when all are compatible; do not force style variety at the expense of the product.
 
