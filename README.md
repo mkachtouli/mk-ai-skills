@@ -2,13 +2,14 @@
 
 A growing library of reusable skills for Codex. Each skill lives in its own folder and contains the instructions, references, scripts, and assets needed for that workflow.
 
-This repository currently includes Studio Image, Product Finish, Hatch Pet, Carrier Invoice, and Product Spec Sheet. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
+This repository currently includes Studio Image, Lifestyle Image, Product Finish, Hatch Pet, Carrier Invoice, and Product Spec Sheet. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
 
 ## Skill catalog
 
 | Skill | Purpose | Main invocation |
 | --- | --- | --- |
 | [studio-image](skills/studio-image/) | Apply the saved white reflective studio theme while preserving each product's design and existing finish, without watermarks | `$studio-image` |
+| [lifestyle-image](skills/lifestyle-image/) | Integrate the exact product into a supplied environment reference, preserving its design and finish | `$lifestyle-image` |
 | [product-finish](skills/product-finish/) | Convert product photos to eight finishes with saved material references and source-locked geometry | `$product-finish` |
 | [hatch-pet](skills/hatch-pet/) | Create, repair, validate, and package animated Codex pets | `$hatch-pet` |
 | [carrier-invoice](skills/carrier-invoice/) | Extract tracking-level shipping and DDP costs from carrier invoices into CSV | `$carrier-invoice /DSL-INVOICE` |
@@ -26,6 +27,10 @@ mk-ai-skills/
 ├── CHANGELOG.md              Repository-wide changes
 └── skills/
     ├── studio-image/
+    │   ├── SKILL.md
+    │   ├── agents/
+    │   └── references/
+    ├── lifestyle-image/
     │   ├── SKILL.md
     │   ├── agents/
     │   └── references/
@@ -138,6 +143,19 @@ $studio-image Process every product photo in this folder. Preserve each existing
 ```
 
 Request a finish conversion explicitly if needed. The original target controls metal hue, saturation and undertone; studio edits must not add warmth or gold grading. The reference supplies photographic direction, not a gold finish for every product. The complete skill folder includes the saved reference so it remains usable across chats. Built-in image generation is required; each result is visually reviewed, but generative edits cannot guarantee pixel-identical product geometry or color. The skill saves images and does not publish listings.
+
+## Lifestyle Image
+
+Supply two input groups: the exact product photograph and an environment photograph or visual inspiration, then invoke:
+
+```text
+$lifestyle-image
+Image 1 is the product. Image 2 is the environment reference. Integrate this exact product into that setting, preserving its design, proportions and natural finish.
+```
+
+The product controls identity and finish; the environment controls the setting. The default retains the reference scene's recognizable layout, materials, viewpoint and lighting, with local installation edits. An explicitly requested inspired adaptation may change the composition while retaining the specified reference features. The skill does not invent a generic room when the environment is missing, and does not require Studio Image preprocessing.
+
+For example, a wall pot filler is placed at a plausible backsplash position above the cooking area; a deck bridge faucet belongs at the sink. Known dimensions guide scale, while unknown fit/scale remains approximate. The skill uses the built-in image editor, reviews the output against both originals and reports unresolved product or scene drift. Generative editing does not guarantee pixel-identical preservation. It produces images without publishing listings.
 
 ## Product Finish
 

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-24 — Reference-guided lifestyle images
+
+- Added `lifestyle-image` with two required inputs: the exact product and the environment photo/inspiration.
+- Locked product design and natural finish, with reference-preserving placement by default and scene adaptation only when requested.
+- Added mounting/scale/lighting review guidance, role-labelled prompts and bounded corrections; no dependency on other product-photography skills.
+
 ## 2026-10-29 — Print-friendly technical figures
 
 - Require technical diagrams or background-removed product cutouts for printed spec sheets, preserving parts and callout alignment.

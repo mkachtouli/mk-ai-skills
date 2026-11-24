@@ -1,0 +1,4 @@
+interface:
+  display_name: "Lifestyle Image"
+  short_description: "Place the exact product in a supplied environment"
+  default_prompt: "Use $lifestyle-image with these two inputs: the exact product photo and the environment reference. Integrate the product realistically while preserving its design, proportions and natural finish and keeping the scene grounded in the supplied environment."
