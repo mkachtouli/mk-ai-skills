@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-11-27 — Etsy Free SEO
+
+- Added `etsy-free-seo` for product URL/photo research using free Google and Etsy surfaces, consistent listing copy, 13 tags and normalized market pricing.
+- Kept the workflow brand-neutral with editable `[BRAND_NAME]`, current-user policy confirmation and no assumed warranty.
+- Added template-variable validation and retained US English, USD and inches defaults, with user overrides.
+
 ## 2026-10-29 — Print-friendly technical figures
 
 - Require technical diagrams or background-removed product cutouts for printed spec sheets, preserving parts and callout alignment.

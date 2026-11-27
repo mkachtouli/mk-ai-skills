@@ -1,0 +1,4 @@
+interface:
+  display_name: "Etsy Free SEO"
+  short_description: "US listing copy from free Google and Etsy research"
+  default_prompt: "Use $etsy-free-seo with this product URL or photo to research free US Google and Etsy sources and prepare a title, sectioned description, 13 tags and a mid-market price."

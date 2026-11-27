@@ -2,12 +2,13 @@
 
 A growing library of reusable skills for Codex. Each skill lives in its own folder and contains the instructions, references, scripts, and assets needed for that workflow.
 
-This repository currently includes Studio Image, Product Finish, Hatch Pet, Carrier Invoice, and Product Spec Sheet. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
+This repository currently includes Etsy Free SEO, Studio Image, Product Finish, Hatch Pet, Carrier Invoice, and Product Spec Sheet. Future skills can cover workflows such as Etsy-to-Shopify listing migration, listing SEO checks, product content, and store operations.
 
 ## Skill catalog
 
 | Skill | Purpose | Main invocation |
 | --- | --- | --- |
+| [etsy-free-seo](skills/etsy-free-seo/) | Prepare brand-neutral Etsy titles, structured descriptions, 13 tags and market prices from free Google and Etsy research | `$etsy-free-seo <product-url-or-photo>` |
 | [studio-image](skills/studio-image/) | Apply the saved white reflective studio theme while preserving each product's design and existing finish, without watermarks | `$studio-image` |
 | [product-finish](skills/product-finish/) | Convert product photos to eight finishes with saved material references and source-locked geometry | `$product-finish` |
 | [hatch-pet](skills/hatch-pet/) | Create, repair, validate, and package animated Codex pets | `$hatch-pet` |
@@ -120,6 +121,16 @@ git pull
 ```
 
 Then copy the updated skill folder to `.agents/skills/` again and start a new Codex session. Save any private edits made inside an installed copy before replacing it.
+
+## Etsy Free SEO
+
+Provide a product URL or attach a product photo:
+
+```text
+$etsy-free-seo Research this product for the US market using free Google and Etsy sources.
+```
+
+The skill uses Google Search, Shopping, Autocomplete, Trends, Etsy Search and public competitors to prepare one title, a consistent sectioned description, 13 tags and a market-based price recommendation. It defaults to US English, USD and inches, with user overrides. Brand mentions stay editable as `[BRAND_NAME]`. Warranty terms are never assumed: include only current user-confirmed terms, or explicit policy variables when a reusable warranty template is requested. Replace variables before publishing. Research distinguishes visible wording and relative interest from unavailable traffic or monthly search counts. Outputs are local text, JSON and research notes; it does not publish listings, generate images or use paid SEO tools by default.
 
 ## Studio Image
 
