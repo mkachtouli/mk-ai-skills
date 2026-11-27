@@ -46,10 +46,16 @@ If a surface is blocked, try one appropriate visible-UI recovery, then continue 
 Read [references/copy-standard.md](references/copy-standard.md) for exact headings and output schema, and [references/etsy-guidance.md](references/etsy-guidance.md) for dated official requirements. Recheck relevant official guidance for the run unless already verified in the same session.
 
 - Deliver **one recommended title** with product noun and essential verified traits. Aim for fewer than 15 words when natural; **140 characters is the hard maximum**, not a target. Report word/character counts. Avoid repetition, superlatives, keyword chains, sale/shipping claims and unrelated gifting language. Do not impose an invented 80/100-character or 40-character universal limit.
-- Write original, buyer-useful copy with the stable description headings. Use the primary phrase naturally near the opening and supporting words where they explain features/use. No keyword-density quota, competitor names, copied passages or keyword dump. Keep seller tasks/research limitations outside buyer copy.
+- Use the exact description headings and order in the copy standard; do not rename, merge or replace sections. Write original, buyer-useful copy. Use the primary phrase naturally near the opening and supporting words where they explain features/use. No keyword-density quota, competitor names, copied passages or keyword dump. Keep seller tasks/research limitations outside buyer copy.
 - Deliver **13 distinct accurate tags**, each **1–20 characters**. Cover product, material/finish and actual use. Avoid reordered duplicates and unrelated padding. If 13 truthful tags cannot be supported, explain the shortage rather than inventing relevance. Do not claim all tags drive traffic.
 - Suggest a specific supported category/attributes separately; if the exact taxonomy cannot be verified, label the path a suggestion.
 - Propose a typical USD interval and one price using normalized offers. Record usable sample size, median when justified, shipping basis and confidence. Use **regular prices as the principal benchmark**, keeping sales separate. No fake discounts, automatic undercutting or profitability claims without costs. The earlier hook-specific $10 premium is not a general pricing rule.
+
+## Mandatory evidence and policy gates
+
+- Shipping, processing, delivery, returns and warranty promises require explicit current-user confirmation for the target shop/product, recorded as `policy_claims` linked to `research_sources`. A source listing or competitor policy alone is insufficient. Omit unconfirmed promises entirely from buyer copy; “verify before publishing” does not make them acceptable. Use the neutral SHIPPING & SUPPORT fallback instead.
+- Deliver `research.md` and `listing.json` together with copy; no evidence-free counts, medians or “market-based” claims. Every product specification and SKU must link to a source; unknown packing/accessories stay unknown in both copy and price assumptions.
+- Record every price comparator as a structured `price_comparables` row with source, exact option/bundle, verified organic discovery, regular/sale prices separately, shipping and inclusion reason. Recompute sample count and median from included normalized rows. Missing evidence means provisional pricing, never invented competitors or statistics.
 
 ## Deliver and verify
 
@@ -59,6 +65,6 @@ Save under `outputs/etsy-free-seo/<product-slug>/` in the current workspace, unl
 - `listing.json`: fields in the copy standard.
 - `research.md`: facts, source-backed keyword table, competitor strengths/gaps, normalized offers, price reasoning, dates/links and missing inputs. Save relevant extracts in `research/` when useful; exclude account identifiers/tokens/unrelated personal data from shareable notes.
 
-Run `python3 <this-skill>/scripts/check_listing.py <package>/listing.json`. Fix errors; review warnings and document intentional exceptions. Manually verify identity, measurements, contents, structure, natural language, evidence and price comparability. The checker validates format, not truth or ranking success. Intentional declared brand/policy variables are editable-template warnings, not completed publication fields.
+Run `python3 <this-skill>/scripts/check_listing.py <package>/listing.json`; it also requires a nonempty sibling `research.md`. Run bundled regression checks after changing validation: `python3 -B <this-skill>/tests/test_check_listing.py`. Fix errors; review warnings and document intentional exceptions. Manually verify identity, measurements, contents, structure, natural language, evidence and price comparability. The checker validates format, not truth or ranking success. Intentional declared brand/policy variables are editable-template warnings, not completed publication fields.
 
 Finish with title, description, tags, recommended price/status and file links, plus a concise useful research finding and material gaps. Preserve a good existing title if evidence supports it. No live listing mutation or ranking/sales guarantees.

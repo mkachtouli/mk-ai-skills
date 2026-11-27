@@ -3,11 +3,95 @@
 import argparse
 import json
 import re
+import statistics
 import unicodedata
 from pathlib import Path
 
 CORE = ['FEATURES', 'DIMENSIONS & FIT', 'MATERIAL & FINISH', 'WHAT’S INCLUDED', 'SHIPPING & SUPPORT', 'PRODUCT IDENTIFICATION']
 OPTIONAL = ['INSTALLATION & CARE', 'INSTALLATION', 'CARE', 'PERSONALIZATION', 'DIGITAL DELIVERY & FILES']
+
+
+def check_evidence(data, desc, errors):
+    sources = data.get('research_sources')
+    source_map = {}
+    if not isinstance(sources, list) or not sources:
+        errors.append('Nonempty research_sources required.')
+    else:
+        for row in sources:
+            if not isinstance(row, dict) or any(not row.get(k) for k in ('id', 'surface', 'date', 'reference', 'observation')):
+                errors.append('Source requires id, surface, date, reference and observation.')
+                continue
+            if row['id'] in source_map:
+                errors.append('Duplicate source id.')
+            source_map[row['id']] = row
+    policies = data.get('policy_claims')
+    if not isinstance(policies, list):
+        errors.append('policy_claims array required; empty for neutral fallback.')
+        policies = []
+    covered = []
+    for row in policies:
+        if not isinstance(row, dict):
+            errors.append('Invalid policy claim.')
+            continue
+        claim = row.get('text')
+        if not isinstance(claim, str) or not claim or claim not in desc:
+            errors.append('Policy text must match an actual buyer-copy claim.')
+        elif row.get('confirmed_by_current_user') is not True or row.get('scope') != 'target_shop_product' or row.get('source_id') not in source_map:
+            errors.append('Policy claim requires linked current-user confirmation for target shop/product.')
+        else:
+            covered.append(claim)
+    # Conservative screening: semantic evidence review is still required.
+    unchecked = desc
+    for claim in covered:
+        unchecked = unchecked.replace(claim, '')
+    if re.search(r'\b(?:warrant(?:y|ies)|guarantee|free\s+(?:US\s+)?shipping|express\s+(?:shipping|delivery)|DDP|ships?\s+from|ships?\s+within|\d+\s*[-–]?\s*(?:day|year|business.day|hour)s?\b)', unchecked, re.I):
+        errors.append('Possible concrete policy promise without a confirmed policy_claims record; review buyer copy.')
+    rows = data.get('price_comparables')
+    if not isinstance(rows, list):
+        errors.append('price_comparables array required; empty when evidence unavailable.')
+        rows = []
+    price = data.get('price_recommendation', {})
+    basis = price.get('comparison_basis') if isinstance(price, dict) else None
+    if basis not in ('delivered', 'item_only'):
+        errors.append('comparison_basis must be delivered or item_only.')
+    values, sellers = [], set()
+    num = lambda v: isinstance(v, (float, int)) and not isinstance(v, bool)
+    for row in rows:
+        if not isinstance(row, dict) or any(k not in row for k in ('source_id', 'seller', 'option', 'placement_status', 'placement_evidence', 'regular_usd', 'sale_usd', 'shipping_usd', 'included', 'reason')):
+            errors.append('Incomplete price comparator evidence row.')
+            continue
+        if not isinstance(row['included'], bool):
+            errors.append('Comparator included flag must be boolean.')
+        if not row['included']:
+            continue
+        if row['source_id'] not in source_map or row['placement_status'] != 'organic' or not all(row.get(k) for k in ('seller', 'option', 'placement_evidence', 'reason')):
+            errors.append('Included comparator needs source, exact offer and verified organic evidence.')
+            continue
+        if row['seller'].casefold() in sellers:
+            errors.append('Do not count one seller more than once in a comparison group.')
+        sellers.add(row['seller'].casefold())
+        regular, shipping = row['regular_usd'], row['shipping_usd']
+        if not num(regular) or regular <= 0:
+            errors.append('Included comparator needs positive regular USD price.')
+            continue
+        if shipping is not None and (not num(shipping) or shipping < 0):
+            errors.append('Shipping must be nonnegative or null.')
+            continue
+        if basis == 'delivered' and shipping is None:
+            errors.append('Delivered comparison cannot assume unknown shipping is free.')
+            continue
+        values.append(regular + shipping if basis == 'delivered' else regular)
+    if isinstance(price, dict):
+        if price.get('usable_comparable_count') != len(values):
+            errors.append('Comparable count does not match eligible evidence rows.')
+        median = price.get('regular_median_usd')
+        if median is not None:
+            if len(values) < 3:
+                errors.append('Representative median requires at least three eligible rows.')
+            elif not num(median) or abs(median - statistics.median(values)) > 0.011:
+                errors.append('Regular median does not match normalized comparator prices.')
+        if not values and price.get('confidence') != 'provisional':
+            errors.append('No eligible comparisons: mark price confidence provisional.')
 
 
 def inspect(data):
@@ -64,7 +148,12 @@ def inspect(data):
     if not isinstance(desc, str) or not desc.strip():
         errors.append('Nonempty description required.')
     else:
-        lines = [line.strip().replace("WHAT'S INCLUDED", 'WHAT’S INCLUDED') for line in desc.splitlines()]
+        lines = [line.strip().strip('*').strip().replace("WHAT'S INCLUDED", 'WHAT’S INCLUDED') for line in desc.splitlines()]
+        for line in lines:
+            if line and re.fullmatch(r'[A-Z][A-Z &’\'(),/\-]+', line) and line not in CORE + OPTIONAL:
+                errors.append(f'Nonstandard description heading: {line}.')
+        if re.search(r'verify before publishing|confirm this policy|do not paste', desc, re.I):
+            errors.append('Seller verification instructions must not appear in buyer copy.')
         found = [line for line in lines if line in CORE + OPTIONAL]
         indices = [CORE.index(h) for h in found if h in CORE]
         if indices != sorted(indices) or len(found) != len(set(found)):
@@ -74,7 +163,7 @@ def inspect(data):
             errors.append('omitted_sections must be an object.')
             omitted = {}
         for heading in CORE:
-            if heading not in found and not omitted.get(heading):
+            if heading not in found and (heading in ('FEATURES', 'WHAT’S INCLUDED', 'SHIPPING & SUPPORT') or not omitted.get(heading)):
                 errors.append(f'Missing section {heading!r}; include or document omission.')
         for heading in OPTIONAL:
             if heading in found and ('WHAT’S INCLUDED' not in found or 'SHIPPING & SUPPORT' not in found or not found.index('WHAT’S INCLUDED') < found.index(heading) < found.index('SHIPPING & SUPPORT')):
@@ -109,8 +198,7 @@ def inspect(data):
                 warnings.append('Median has fewer than three comparables; explain limited sample.')
         if not price.get('shipping_basis'):
             errors.append('State price shipping_basis.')
-    if not data.get('research_sources'):
-        warnings.append('No research_sources; do not claim evidence-backed completion.')
+    check_evidence(data, desc if isinstance(desc, str) else '', errors)
     return errors, warnings
 
 
@@ -124,6 +212,9 @@ def main():
         print('ERROR:', exc)
         return 1
     errors, warnings = inspect(data)
+    report = args.listing.parent / 'research.md'
+    if not report.is_file() or not report.read_text().strip():
+        errors.append('Nonempty research.md must accompany listing.json.')
     for error in errors:
         print('ERROR:', error)
     for warning in warnings:

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-27 — Enforced listing structure and evidence
+
+- Require exact description sections, current-user evidence for shipping/return/warranty promises and linked source records.
+- Validate normalized price comparator rows, sample counts, medians and accompanying research report; added 12 regression checks.
+
 ## 2026-11-27 — Organic-only Etsy SEO research
 
 - Exclude paid and uncertain Google/Etsy placements from keyword, competitor and price analysis, including Sponsored Shopping cards.

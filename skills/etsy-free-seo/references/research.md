@@ -55,6 +55,12 @@ Try for 5–8 genuinely comparable observed offers when feasible; fewer clean of
 4. For a reasonably comparable sample, normally at least three usable offers, report sample size, regular median and a typical observed interval, explaining exclusions/outliers. Do not call a handpicked minimum/maximum a market average. With sparse/heterogeneous evidence, propose a provisional reasoned range and no representative median.
 5. Recommend one defensible price and shipping assumption. A delivered/free-shipping target depends on actual costs. Product, packing, labor, fees, Ads, shipping and returns allowance are needed for profitability. Competitor prices do not prove margins. Do not automatically undercut the cheapest offer.
 
+## Required evidence handoff
+
+Always deliver `research.md` and `listing.json` with the copy. Supply linked source IDs and dated observations for specifications, SKU, keywords, organic discovery and each price row. Report counts and medians only when reproducible from included `price_comparables`; one independently selected seller offer per comparable, keeping other sizes in separate comparison groups. Do not count the user-supplied source in an independent competitor median. When fewer than three eligible rows exist, leave the representative median null and state the limited evidence. Unknown shipping remains null, never zero; identify item-only comparisons explicitly.
+
+Current-user confirmation for the target shop/product is required for concrete shipping, returns and warranty promises. Competitor/source policies can be documented as attributed research but cannot enter buyer copy or be legitimized by a “verify before publishing” note.
+
 ## Blockers and audit trail
 
 Save dates, actual settings and relevant raw evidence. Do not claim autocomplete used if only a prefix was typed, or Trends used if no report loaded. If one source fails after a reasonable UI recovery, continue other work and identify the limit. Never replace missing free-source evidence with paid databases without explicit authorization.
