@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-27 — Organic-only Etsy SEO research
+
+- Exclude paid and uncertain Google/Etsy placements from keyword, competitor and price analysis, including Sponsored Shopping cards.
+- Require visible placement evidence and independently observed organic appearances for listings also advertised.
+
 ## 2026-11-27 — Etsy Free SEO
 
 - Added `etsy-free-seo` for product URL/photo research using free Google and Etsy surfaces, consistent listing copy, 13 tags and normalized market pricing.

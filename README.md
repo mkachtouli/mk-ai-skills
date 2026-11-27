@@ -130,7 +130,7 @@ Provide a product URL or attach a product photo:
 $etsy-free-seo Research this product for the US market using free Google and Etsy sources.
 ```
 
-The skill uses Google Search, Shopping, Autocomplete, Trends, Etsy Search and public competitors to prepare one title, a consistent sectioned description, 13 tags and a market-based price recommendation. It defaults to US English, USD and inches, with user overrides. Brand mentions stay editable as `[BRAND_NAME]`. Warranty terms are never assumed: include only current user-confirmed terms, or explicit policy variables when a reusable warranty template is requested. Replace variables before publishing. Research distinguishes visible wording and relative interest from unavailable traffic or monthly search counts. Outputs are local text, JSON and research notes; it does not publish listings, generate images or use paid SEO tools by default.
+The skill uses verified non-sponsored Google Search and free Shopping listings, Autocomplete, Trends, organic Etsy Search and public competitors to prepare one title, a consistent sectioned description, 13 tags and a market-based price recommendation. It defaults to US English, USD and inches, with user overrides. Brand mentions stay editable as `[BRAND_NAME]`. Warranty terms are never assumed: include only current user-confirmed terms, or explicit policy variables when a reusable warranty template is requested. Replace variables before publishing. Research distinguishes visible wording and relative interest from unavailable traffic or monthly search counts. Outputs are local text, JSON and research notes; it does not publish listings, generate images or use paid SEO tools by default.
 
 ## Studio Image
 

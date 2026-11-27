@@ -4,9 +4,17 @@
 
 Use English Google Search and US country targeting (`hl=en`, `gl=us` when supported). Use visible non-personalized results controls and verify the resulting state. Physical location can still matter; US parameters do not prove a US IP or fixed nationwide ranking. For Etsy, verify US/English/USD display. For delivered-price comparisons, use the same public reference destination, e.g. US ZIP 10001, explicitly not the buyer's address.
 
-Search progressively from exact identity to matching use. Read relevant results rather than cycling through guessed URLs. Google Shopping prices require merchant/variant verification; separate Sponsored placements. A result title or shopping card does not verify the product's full specification.
+Search progressively from exact identity to matching use. Read relevant results rather than cycling through guessed URLs. Google Shopping prices require merchant/variant verification and a verified free, non-sponsored listing. Paid placements are excluded, not analyzed as a separate comparator group. A result title or shopping card does not verify the product's full specification.
 
 Autocomplete can lag after filling text. Observe the updated dropdown before assigning suggestions; immediate ArrowDown may select an old suggestion. Separate history, generic weekly trends and shop-name searches from product suggestions. Never turn a suggestion into an invented monthly volume.
+
+## Organic-only eligibility
+
+Use only verified non-sponsored Google Search, Google Shopping and Etsy Search results for keyword extraction, competitor analysis and price recommendations. Exclude cards/blocks labelled Sponsored, Ad, Ads, Promoted, Etsy Ads or equivalent labels in other languages. Check the enclosing block as well as the individual card; a paid block label applies to its cards. Search position alone and missing labels in a truncated extract do not prove organic status. If status cannot be established from the visible UI/context, exclude it and record the limitation.
+
+For each accepted search result, record query, surface, URL, date, placement status (`organic`) and visible evidence/context. Excluded paid or ambiguous results may be logged with an exclusion reason but must not supply keyword recommendations, competitor findings or price calculations. Do not open an ad-discovered merchant directly to relabel it organic. If the same listing also appears independently in an organic result, use and document that organic appearance; its ad appearance is not an automatic ban on the whole seller.
+
+The user-supplied product URL remains the authority for identifying their requested product, regardless of how they obtained it; it does not establish organic rank or count as an independently discovered competitor. Autocomplete and Trends remain eligible on their own terms, without treating them as search-result rankings.
 
 ## Evidence classes
 
@@ -24,7 +32,7 @@ Call competitor phrases **visible keywords / observed appearance**, never confir
 
 ## Competitor selection
 
-Normally study 3–5 listings. Prefer comparable organic offers; record ads separately and exclude Recently viewed/recommendation modules from ranking observations. A seller can appear both in an Ad and organically. Record:
+Normally study 3–5 listings. Select comparable verified organic offers only; ads and ambiguous placements are ineligible. Exclude Recently viewed/recommendation modules from organic ranking observations. A seller can appear both in an Ad and organically; document the independent organic result used. Record:
 
 - Actual selected finish, size, quantity, material, bundle and accessories.
 - Public title/description phrases and main use.
@@ -39,9 +47,9 @@ Strengths are observed features or reasoned interpretations, not proven reasons 
 
 Try for 5–8 genuinely comparable observed offers when feasible; fewer clean offers are better than misleading minimums. Deep competitor review and price research can reuse the same sources. Record:
 
-`URL | date | merchant | selected variation | quantity | material/finish | dimensions | currency | regular | sale | shipping to reference destination | eligible/excluded reason`
+`URL | date | discovery query/surface | placement status/evidence | merchant | selected variation | quantity | material/finish | dimensions | currency | regular | sale | shipping to reference destination | eligible/excluded reason`
 
-1. Normalize the **offer before price**. A cheap stopper-only minimum is not a complete P-trap kit. Explicitly choose the correct option where possible; exclude ambiguous unselected `+` prices, samples, deposits, per-piece minima used as pack totals and unrelated add-ons from normalized calculations.
+1. Admit only offers discovered through verified organic/free listings; exclude paid or ambiguous discoveries from sample size, medians, ranges and recommendations. Then normalize the **offer before price**. A cheap stopper-only minimum is not a complete P-trap kit. Explicitly choose the correct option where possible; exclude ambiguous unselected `+` prices, samples, deposits, per-piece minima used as pack totals and unrelated add-ons from normalized calculations.
 2. Use regular prices as this seller's main benchmark; show current sales separately. Do not manufacture an artificial regular price/discount for the proposed item.
 3. Compare USD delivered totals (item plus mandatory shipping) to one destination where verified. Unknown shipping is not free. State whether a median is item-only or delivered. Keep unverified taxes/duties unknown. If currency conversion is needed, verify dated rate and retain original values.
 4. For a reasonably comparable sample, normally at least three usable offers, report sample size, regular median and a typical observed interval, explaining exclusions/outliers. Do not call a handpicked minimum/maximum a market average. With sparse/heterogeneous evidence, propose a provisional reasoned range and no representative median.
