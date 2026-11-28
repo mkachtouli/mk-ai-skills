@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-28 — Free search-engine fallbacks
+
+- Continue through Bing, DuckDuckGo and Yahoo when Google is blocked or unavailable, using verified organic results only.
+- Record actual engines/settings and unavailable surfaces; deduplicate results and never substitute search suggestions for Google Trends indices.
+
 ## 2026-11-27 — Enforced listing structure and evidence
 
 - Require exact description sections, current-user evidence for shipping/return/warranty promises and linked source records.

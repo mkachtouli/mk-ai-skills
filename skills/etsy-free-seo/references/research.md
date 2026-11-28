@@ -8,9 +8,25 @@ Search progressively from exact identity to matching use. Read relevant results 
 
 Autocomplete can lag after filling text. Observe the updated dropdown before assigning suggestions; immediate ArrowDown may select an old suggestion. Separate history, generic weekly trends and shop-name searches from product suggestions. Never turn a suggestion into an invented monthly volume.
 
+## Search-engine fallback
+
+Google is the preferred web-search source, not a single point of failure. For a visible access error, CAPTCHA, unavailable page or rate limit, make at most one appropriate ordinary UI recovery, then continue independent public research automatically through **Bing → DuckDuckGo → Yahoo**, stopping at the first engine that supplies usable organic results. Do not keep retrying Google or require the user to unblock it before doing independent research. If that fallback fails, try the next engine; once evidence is sufficient, stop. Do not evade CAPTCHA, authentication, rate limits or security warnings; use the required takeover only if recovering that particular surface is necessary.
+
+Use the same exact product/material/use queries and US English settings where available. Verify and record actual region/language in each engine’s UI; if US targeting cannot be established, mark that limitation rather than claiming US rankings. Do not assume Google URL parameters work on another engine. Bing, Yahoo and DuckDuckGo ads, sponsored shopping cards and ambiguous placements remain excluded. Read the original merchant/Etsy page to verify the actual offer. Deduplicate the same seller/listing across engines; repeated or syndicated results are not independent competitors or demand confirmation.
+
+Distinguish the failed Google surface:
+
+- **Search:** another engine’s organic results can replace discovery and vocabulary research.
+- **Shopping:** use verified free shopping listings if the fallback offers them; otherwise use organic merchant results and verified direct product offers. Do not claim Shopping was inspected if it was unavailable.
+- **Autocomplete:** observe actual fallback suggestions if available and identify the engine/prefix. These are not Google Autocomplete or measured search volume.
+- **Trends:** Bing/Yahoo/DuckDuckGo result counts, suggestions or rankings cannot replace Google Trends indices. If Trends remains unavailable, record missing trend evidence and complete the supported research without fabricated trend data.
+- **Etsy Search:** a query such as `site:etsy.com/listing <product phrase>` on an accessible engine may discover public Etsy competitors, but establishes organic appearance on that engine only, not Etsy rank or Etsy Autocomplete. Report the actual Etsy surface limitation.
+
+For every attempt, record engine/surface, query, date, actual settings, status (`used`, `blocked`, `unavailable`) and failure reason when applicable. Accepted evidence retains source URLs, placement evidence and engine identity. Mention actual substitutions in the final handoff. If all search engines fail, complete only source-supported copy; mark competitor research and pricing provisional or unavailable.
+
 ## Organic-only eligibility
 
-Use only verified non-sponsored Google Search, Google Shopping and Etsy Search results for keyword extraction, competitor analysis and price recommendations. Exclude cards/blocks labelled Sponsored, Ad, Ads, Promoted, Etsy Ads or equivalent labels in other languages. Check the enclosing block as well as the individual card; a paid block label applies to its cards. Search position alone and missing labels in a truncated extract do not prove organic status. If status cannot be established from the visible UI/context, exclude it and record the limitation.
+Use only verified non-sponsored Google Search, Google Shopping, Bing, DuckDuckGo, Yahoo and Etsy Search results for keyword extraction, competitor analysis and price recommendations. Exclude cards/blocks labelled Sponsored, Ad, Ads, Promoted, Etsy Ads or equivalent labels in other languages. Check the enclosing block as well as the individual card; a paid block label applies to its cards. Search position alone and missing labels in a truncated extract do not prove organic status. If status cannot be established from the visible UI/context, exclude it and record the limitation.
 
 For each accepted search result, record query, surface, URL, date, placement status (`organic`) and visible evidence/context. Excluded paid or ambiguous results may be logged with an exclusion reason but must not supply keyword recommendations, competitor findings or price calculations. Do not open an ad-discovered merchant directly to relabel it organic. If the same listing also appears independently in an organic result, use and document that organic appearance; its ad appearance is not an automatic ban on the whole seller.
 
@@ -63,4 +79,4 @@ Current-user confirmation for the target shop/product is required for concrete s
 
 ## Blockers and audit trail
 
-Save dates, actual settings and relevant raw evidence. Do not claim autocomplete used if only a prefix was typed, or Trends used if no report loaded. If one source fails after a reasonable UI recovery, continue other work and identify the limit. Never replace missing free-source evidence with paid databases without explicit authorization.
+Save dates, actual settings and relevant raw evidence. Do not claim autocomplete used if only a prefix was typed, or Trends used if no report loaded. If one source fails after a reasonable UI recovery, follow the search-engine fallback above, continue other supported work and identify the actual limit. Never replace missing free-source evidence with paid databases without explicit authorization.
